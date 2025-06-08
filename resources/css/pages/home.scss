@@ -1,7 +1,9 @@
+@use '../variables' as v;
 
 .h1{
     font-size: 2.986rem;
     margin: 0;
+
 }
 .offset-2rem{
     margin-left : 6rem;
@@ -13,8 +15,10 @@
 
 .hero{
     display: flex;
-    flex-direction: row;
-    padding: 2rem 0;
+    flex-direction: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-cta{
@@ -28,4 +32,27 @@
 .hero-buttons{
     display:flex;
     gap: 1.5rem;
+}
+
+.hero-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: v.$small-screen) {
+    .hero{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-image{
+        height: 20vw;
+    }
+    .hero-cta{
+        text-align: center;
+    }
+    .offset-2rem{
+        margin-left : 0;
+    }
+    
 }

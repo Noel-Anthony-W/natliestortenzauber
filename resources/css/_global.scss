@@ -1,0 +1,69 @@
+@use 'variables' as v;
+
+* {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box; /* Wichtig für konsistentes Box-Modell */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.h1-font-size{
+    font-size: v.$h1-font-size;
+}
+.h2-font-size{
+    font-size: v.$h2-font-size;
+}
+
+.h3-font-size{
+    font-size: v.$h3-font-size;
+}
+
+.h4-font-size{
+    font-size: v.$h4-font-size;
+}
+
+.h5-font-size{
+    font-size: v.$h5-font-size;
+}
+
+.h6-font-size{
+    font-size: v.$h6-font-size;
+}
+
+.p-font-size{
+    font-size: v.$p-font-size;
+}
+
+
+main {
+    max-width: v.$max-content-width;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.btn-primary{
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: v.$primary-color;
+
+     &:hover{
+     background-color: v.$primary-color-hover;
+    }
+}
+
+.btn-secondary{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid v.$primary-color;
+    background-color: transparent;
+
+    &:hover{
+     background-color: v.$primary-color-hover;
+    }
+}

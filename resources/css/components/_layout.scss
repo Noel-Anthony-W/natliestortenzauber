@@ -1,6 +1,11 @@
+@use '../variables' as v;
+
 nav{
     display:flex;
     align-items: center;
+    max-width: v.$max-content-width;
+    margin: 0 auto;
+    padding: 1rem;
 }
 .logo{
     height: 5,25rem;
@@ -13,11 +18,11 @@ nav{
     display: flex;
     gap: 4rem;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
     padding: 1rem ;
     flex-grow: 1;
     font-size: 1.44rem;
-    font-weight: 500 !important;
+    font-weight: 500 ;
 
     a{
         padding: 0.5rem 1rem;
@@ -26,8 +31,8 @@ nav{
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: hsl(308, 31%, 75%);
-            color: hsl(0, 0%, 10%);
+            background-color: v.$primary-color;
+            color: v.$text-color;
         }
     }
 }
@@ -35,8 +40,8 @@ nav{
 .nav-link-active{
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
-        background-color: hsl(308, 31%, 75%);
-        color: hsl(0, 0%, 10%);
+        background-color: v.$primary-color;
+        color: v.$text-color;
 }
 
 

@@ -1,4 +1,5 @@
+@use 'variables';
 @use 'global.scss';
-@use 'components/layout.scss';
-@use 'pages/home.scss';
+@use 'pages/home';
+@use 'components/layout';
 
