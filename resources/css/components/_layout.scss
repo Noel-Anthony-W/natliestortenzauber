@@ -1,30 +1,31 @@
 @use '../variables' as v;
 
-nav{
-    display:flex;
+nav {
+    display: flex;
     align-items: center;
     max-width: v.$max-content-width;
     margin: 0 auto;
     padding: 1rem;
 }
-.logo{
-    height: 5,25rem;
+
+.logo {
+    height: 5, 25rem;
     width: 5.25rem;
     border-radius: 1rem;
 }
 
 
-.main-navigation{
+.main-navigation {
     display: flex;
     gap: 4rem;
     align-items: center;
-    justify-content: center;    
-    padding: 1rem ;
+    justify-content: center;
+    padding: 1rem;
     flex-grow: 1;
-    font-size: 1.44rem;
-    font-weight: 500 ;
+    font-size: v.$h5-font-size;
+    font-weight: 500;
 
-    a{
+    a {
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         box-shadow: none;
@@ -37,12 +38,9 @@ nav{
     }
 }
 
-.nav-link-active{
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        background-color: v.$primary-color;
-        color: v.$text-color;
+.nav-link-active {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: v.$primary-color;
+    color: v.$text-color;
 }
-
-
-

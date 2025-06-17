@@ -1,69 +1,202 @@
 @use 'variables' as v;
 
 * {
-  font-family: "Inter", sans-serif;
-  text-decoration: none;
-  color: inherit;
-  box-sizing: border-box; /* Wichtig für konsistentes Box-Modell */
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    /* Wichtig für konsistentes Box-Modell */
 }
 
-h1, h2, h3, h4, h5, h6 {
+
+.m-xs {
+    margin: v.$spacing-xs;
+}
+
+.m-sm {
+    margin: v.$spacing-sm;
+}
+
+.m-md {
+    margin: v.$spacing-md;
+}
+
+.m-lg {
+    margin: v.$spacing-lg;
+}
+
+.m-xl {
+    margin: v.$spacing-xl;
+}
+
+.mb-xs {
+    margin-bottom: v.$spacing-xs;
+}
+
+.mb-sm {
+    margin-bottom: v.$spacing-sm;
+}
+
+.mb-md {
+    margin-bottom: v.$spacing-md;
+}
+
+.mb-lg {
+    margin-bottom: v.$spacing-lg;
+}
+
+.mb-xl {
+    margin-bottom: v.$spacing-xl;
+}
+
+.mt-xs {
+    margin-top: v.$spacing-xs;
+}
+
+.mt-sm {
+    margin-top: v.$spacing-sm;
+}
+
+.mt-md {
+    margin-top: v.$spacing-md;
+}
+
+.mt-lg {
+    margin-top: v.$spacing-lg;
+}
+
+.mt-xl {
+    margin-top: v.$spacing-xl;
+}
+
+.gap-xs {
+    gap: v.$spacing-xs;
+}
+
+.gap-sm {
+    gap: v.$spacing-sm;
+}
+
+.gap-md {
+    gap: v.$spacing-md;
+}
+
+.gap-lg {
+    gap: v.$spacing-lg;
+}
+
+.gap-xl {
+    gap: v.$spacing-xl;
+}
+
+.weight-medium {
+    font-weight: 500;
+}
+
+.weight-light {
+    font-weight: 400;
+}
+
+.weight-bold {
     font-weight: 600;
 }
 
-.h1-font-size{
+.h1-font-size {
     font-size: v.$h1-font-size;
 }
-.h2-font-size{
+
+.h2-font-size {
     font-size: v.$h2-font-size;
 }
 
-.h3-font-size{
+.h3-font-size {
     font-size: v.$h3-font-size;
 }
 
-.h4-font-size{
+.h4-font-size {
     font-size: v.$h4-font-size;
 }
 
-.h5-font-size{
+.h5-font-size {
     font-size: v.$h5-font-size;
 }
 
-.h6-font-size{
+.h6-font-size {
     font-size: v.$h6-font-size;
 }
 
-.p-font-size{
+.p-font-size {
     font-size: v.$p-font-size;
 }
 
+.hw-4 {
+    height: 4rem;
+    width: 4rem;
+}
 
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
     max-width: v.$max-content-width;
     justify-content: center;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-.btn-primary{
+.btn-primary {
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
-    border-style: none;
+    border: 0.3rem solid v.$primary-color;
     background-color: v.$primary-color;
 
-     &:hover{
-     background-color: v.$primary-color-hover;
+    &:hover {
+        background-color: v.$primary-color-hover;
     }
 }
 
-.btn-secondary{
+.btn-secondary {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.3rem solid v.$primary-color;
+    background-color: transparent;
+
+    &:hover {
+        background-color: v.$primary-color-hover;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.j-c-center {
+    justify-content: center;
+}
+
+.flex-col .btn-secondary {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     border: 1px solid v.$primary-color;
     background-color: transparent;
 
-    &:hover{
-     background-color: v.$primary-color-hover;
+    &:hover {
+        background-color: v.$primary-color-hover;
     }
+}
+
+.bg-primary-light {
+    background-color: v.$primary-color-light;
 }

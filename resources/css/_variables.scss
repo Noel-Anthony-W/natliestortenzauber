@@ -17,7 +17,9 @@ $box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 
 // GlobalColors
 $primary-color: hsl(308, 31%, 75%);
+$primary-color-light: hsla(308, 31%, 75%, 0.5);
 $primary-color-hover: hsl(308, 31%, 80%);
+$secondary-color: hsl(51, 100%, 40%);
 $text-color: hsl(0, 0%, 10%);
 
 $h1-font-size: 2.986rem;
@@ -29,7 +31,7 @@ $h6-font-size: 1.2rem;
 $p-font-size: 1rem;
 $small-font-size: 0.833rem;
 
-$max-content-width: 1280px;
+$max-content-width: 1320px;
 
 // Media 
 
