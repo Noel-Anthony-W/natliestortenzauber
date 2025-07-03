@@ -7,8 +7,6 @@
     box-sizing: border-box;
     /* Wichtig für konsistentes Box-Modell */
 }
-
-
 .m-xs {
     margin: v.$spacing-xs;
 }
@@ -89,6 +87,10 @@
     gap: v.$spacing-xl;
 }
 
+.gap-auto{
+    gap: auto;
+}
+
 .weight-medium {
     font-weight: 500;
 }
@@ -129,25 +131,24 @@
     font-size: v.$p-font-size;
 }
 
+.hw-3 {
+    height: 3rem;
+    width: 3rem;
+    display: block;
+}
+
 .hw-4 {
     height: 4rem;
     width: 4rem;
+    display: block;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 3.75rem;
-    max-width: v.$max-content-width;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
+
 
 .btn-primary {
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
-    border: 0.3rem solid v.$primary-color;
+    border: 0.1rem solid v.$primary-color;
     background-color: v.$primary-color;
 
     &:hover {
@@ -158,16 +159,32 @@ main {
 .btn-secondary {
     padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
-    border: 0.3rem solid v.$primary-color;
+    border: 0.1rem solid v.$primary-color;
     background-color: transparent;
 
     &:hover {
         background-color: v.$primary-color-hover;
     }
 }
+.h-center {
+    padding: auto;
+}
+
+.h-25{
+    height: 25rem;
+}
+.map-size-25 {
+    width: 100%;
+    height: 25rem;
+}
+
 
 .flex {
     display: flex;
+}
+
+.flex-column{    
+    flex-direction: column;
 }
 
 .flex-row {
@@ -186,10 +203,11 @@ main {
     justify-content: center;
 }
 
-.flex-col .btn-secondary {
+
+.btn-secondary {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    border: 1px solid v.$primary-color;
+    border: 0.5px solid v.$primary-color;
     background-color: transparent;
 
     &:hover {
@@ -199,4 +217,69 @@ main {
 
 .bg-primary-light {
     background-color: v.$primary-color-light;
+}
+
+.img-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+
+    &:hover {
+        background-color: v.$primary-color;
+        color: v.$text-color;
+    }
+}
+
+.social-img-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+
+    &:hover {
+        background-color: v.$primary-color;
+        color: v.$text-color;
+    }
+}
+
+.a-link{
+    color: v.$primary-color-dark;
+    text-decoration: underline;
+        }
+
+
+.input{    
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+}
+
+.input-textbox{
+    border-radius: v.$border-radius;
+    border: v.$border-size solid v.$primary-color;
+    padding: v.$spacing-xs;
+    box-shadow: none;
+    background: none;
+    font-size: v.$p-font-size;
+
+}
+
+.alert{
+    font-size: v.$h6-font-size;
+    color:red;
+}
+
+@media screen and (max-width: 768px){
+
+    html{
+        display:flex;
+        flex-grow:1;
+    }
+
+    body{        
+        display:flex;
+        flex-direction: column;
+        max-width: 100%;
+        flex-grow:1;
+        margin:0;
+    }
 }

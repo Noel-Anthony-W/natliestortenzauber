@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="{{ asset('images/hero.svg') }}" alt="Hero Image" class="hero-img">
+                <img src="{{ asset('images/hero.svg') }}" alt="Hero Image" >
             </div>
     </section>
     <section id="discover-cakes">
@@ -29,32 +29,16 @@
                 </a> --}}
                 <div class="card-content bg-primary-light">
                     <!-- TODO: Add Preview for Cakes-->
-                    <div class="card-navigation">
-                        <x-preview-button :active="true">Torten</x-preview-button>
-                        <x-preview-button :active="false">Kuchen</x-preview-button>
-                        <x-preview-button :active="false">Kleingebäck</x-preview-button>
-                    </div>
-
-                    <div id="main-cards" class="flex j-c-center align-center  preview">
-                        <button class="img-btn">
-                            <img class="hw-4" src="{{ asset('images/chevron-left.svg') }}"></button>
-                        <div class="flex gap-lg">
-                            <div class="filler"> d</div>
-                            <div class="filler"> d</div>
-                            <div class="filler"> d</div>
-                        </div>
-                        <button class="img-btn">
-                            <img class="hw-4" src="{{ asset('images/chevron-right.svg') }}" /></button>
-                    </div>
+                    <livewire:cake-picture-gallery :pictures="$pictures" />
                 </div>
             </div>
         </div>
     </section>
     <section id="reviews">
-        <div class="flex j-c-center align-center flex-grow">
+        <div class="flex j-c-center align-center flex-grow reviews">
             <div class="flex-row j-c-center align-center flex-grow">
                 <h3 class="h2-font-size h-center"> Andere sind auch überzeugt</h3>
-                <div class="flex j-c-center align-center gap-xl flex-grow">
+                <div class="reviews">
                     @foreach ($reviews as $review)
                         {{-- TODO: ersetzen sobald datenbankmodel erstellt ist --}}
                         <x-review-card :stars="$review['stars']" :name="$review['name']" :heading="$review['heading']" :text="$review['text']"
@@ -64,4 +48,20 @@
             </div>
         </div>
     </section>
+<section id="drive">    
+    <script defer src="https://maps.googleapis.com/maps/api/js?key={{ config('services.maps.api_key') }}&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+        <div >
+            <h3 class="h2-font-size h-center">Mein Standort</h3>
+            <div class="flex flex-grow">
+               
+                <div class="flex-grow h-40" >
+                    <gmp-map class="map-size-25" center="49.4403,11.8633" zoom="8" map-id="DEMO_MAP_ID">
+                          <gmp-advanced-marker position="49.4403,11.8633" title="My location"></gmp-advanced-marker>
+                    </gmp-map>
+                </div>
+            </div>
+            <p>Genauere Standort daten gibt es bei einer <a class="a-link" href="{{ route('order') }}">Bestellung</a></p>
+        </div>
+</section>
 </x-layout>

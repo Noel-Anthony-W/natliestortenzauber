@@ -13,11 +13,15 @@ $spacing-xl: 3rem;
 
 // Borders & Shadows
 $border-radius: 0.25rem;
+$border-size: 0.1rem;
 $box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 
 // GlobalColors
+
+$background-color: hsla(53, 50%, 94%, 0.5);
 $primary-color: hsl(308, 31%, 75%);
 $primary-color-light: hsla(308, 31%, 75%, 0.5);
+$primary-color-dark: hsla(308, 31%, 50%);
 $primary-color-hover: hsl(308, 31%, 80%);
 $secondary-color: hsl(51, 100%, 40%);
 $text-color: hsl(0, 0%, 10%);

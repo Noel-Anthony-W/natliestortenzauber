@@ -1,5 +1,5 @@
 @props(['stars' => 0, 'name', 'heading', 'text', 'url'])
-<div class="flex-row review-container ">
+<div class="flex-row review-container">
     <div class="flex align-center gap-sm">
         {{-- Stars --}}
         @for ($i = 0; $i <= 5; $i++)

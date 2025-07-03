@@ -14,9 +14,17 @@ nav {
     border-radius: 1rem;
 }
 
+body {
+    display:flex;
+    flex-direction: column;
+    max-width: v.$max-content-width;
+    justify-content: center;
+    margin: 0 auto;
+    gap: v.$spacing-md
+
+}
 
 .main-navigation {
-    display: flex;
     gap: 4rem;
     align-items: center;
     justify-content: center;
@@ -43,4 +51,43 @@ nav {
     border-radius: 0.5rem;
     background-color: v.$primary-color;
     color: v.$text-color;
+}
+
+.footer-container{
+    display:flex;
+    flex-direction: row;
+    gap: v.$spacing-md;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction: row;
+    flex-grow:1;
+    gap: v.$spacing-md;
+    align-items: center;
+    justify-content: left;
+}
+
+.footer-socials{
+    display:flex;
+    flex-direction: row;
+    gap: v.$spacing-md;
+    align-items:center;
+    justify-content: center;
+}
+
+.footer-link{
+    color: v.$primary-color-dark;
+    text-decoration: underline;
+}
+
+
+@media  screen and (max-width: v.$small-screen) {
+    .footer-container{        
+        flex-direction: column;
+    }
+    .footer-links{
+        flex-direction: column;
+
+    }
 }

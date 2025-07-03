@@ -1,0 +1,39 @@
+@use '../variables' as v;
+
+.contact-container{
+    display:flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: v.$spacing-md;
+    align-items: top;
+    justify-content: top;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: v.$spacing-lg;
+
+    div{
+        form{
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: v.$spacing-sm;
+        }
+    }
+}
+
+.contact-sidebar{
+    flex-grow:1;
+}
+
+.input-group-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow:1;
+    gap: v.$spacing-md
+}

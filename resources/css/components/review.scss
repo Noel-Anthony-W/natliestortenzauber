@@ -1,12 +1,15 @@
 @use '../variables' as v;
 
 .review-container {
+    min-width: fit-content;
+    min-width:min-content;
     padding: 0 v.$spacing-md;
     flex-grow: 1;
     gap: 1rem;
     height: 15rem;
     width: 10rem;
     background-color: v.$primary-color-light;
+    border-radius: v.$border-radius;
 }
 
 .cake-icon {
